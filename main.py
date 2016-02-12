@@ -3,7 +3,7 @@ import webapp2
 import urllib2
 import urlparse
 import sys
-sys.path.insert(0,'libs')
+sys.path.insert(1,'libs')
 from bs4 import BeautifulSoup as bsp
 import os
 import jinja2
@@ -51,7 +51,7 @@ def Quora(self,r_url):
     for i in range(count):
         if answers[i].find('div',class_='answer_content'):
             self.response.write(answers[i].find('div',class_='answer_content').text)
-            self.response.write('-----------------------------------------------------------------')
+            self.response.write('--'*30)
     
     
 
